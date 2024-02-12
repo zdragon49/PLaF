@@ -1,4 +1,4 @@
-open Ds
+open Ds 
 open Parser_plaf.Ast
 open Parser_plaf.Parser
     
@@ -28,7 +28,10 @@ let rec eval_expr : expr -> int result =
   | Abs(e) ->
     eval_expr e >>= fun n ->
     return (abs n)
-  | _ -> failwith "Not implemented yet!"
+  | Min(e1,e2) ->
+    eval_expr e1 >>= fun m ->
+    eval_expr e2 >>= fun n ->
+    return (min n m)
 
 (** [eval_prog e] evaluates program [e] *)
 let eval_prog (AProg(_,e)) =
