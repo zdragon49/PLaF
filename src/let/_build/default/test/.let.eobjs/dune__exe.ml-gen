@@ -1,0 +1,6 @@
+(** @canonical Dune__exe.Let *)
+module Let = Dune__exe__Let
+
+
+(** @canonical Dune__exe.Test *)
+module Test = Dune__exe__Test

@@ -1,0 +1,53 @@
+(lang dune 3.14)
+(name rec)
+(sections (lib .) (libexec .))
+(files
+ (lib
+  (META
+   ds.ml
+   dune-package
+   interp.ml
+   opam
+   rec.a
+   rec.cma
+   rec.cmi
+   rec.cmt
+   rec.cmx
+   rec.cmxa
+   rec.ml
+   rec__Ds.cmi
+   rec__Ds.cmt
+   rec__Ds.cmx
+   rec__Interp.cmi
+   rec__Interp.cmt
+   rec__Interp.cmx))
+ (libexec (rec.cmxs)))
+(library
+ (name rec)
+ (kind normal)
+ (synopsis "Interpreter for REC")
+ (archives (byte rec.cma) (native rec.cmxa))
+ (plugins (byte rec.cma) (native rec.cmxs))
+ (native_archives rec.a)
+ (requires parser_plaf)
+ (main_module_name Rec)
+ (modes byte native)
+ (modules
+  (wrapped
+   (group
+    (alias
+     (obj_name rec)
+     (visibility public)
+     (kind alias)
+     (source (path Rec) (impl (path rec.ml-gen))))
+    (name Rec)
+    (modules
+     (module
+      (obj_name rec__Ds)
+      (visibility public)
+      (source (path Ds) (impl (path ds.ml))))
+     (module
+      (obj_name rec__Interp)
+      (visibility public)
+      (source (path Interp) (impl (path interp.ml))))))
+   (wrapped true))))

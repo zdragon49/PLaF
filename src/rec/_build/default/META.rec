@@ -1,0 +1,6 @@
+description = "Interpreter for REC"
+requires = "parser_plaf"
+archive(byte) = "rec.cma"
+archive(native) = "rec.cmxa"
+plugin(byte) = "rec.cma"
+plugin(native) = "rec.cmxs"

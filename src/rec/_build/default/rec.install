@@ -1,0 +1,23 @@
+lib: [
+  "_build/install/default/lib/rec/META"
+  "_build/install/default/lib/rec/ds.ml"
+  "_build/install/default/lib/rec/dune-package"
+  "_build/install/default/lib/rec/interp.ml"
+  "_build/install/default/lib/rec/opam"
+  "_build/install/default/lib/rec/rec.a"
+  "_build/install/default/lib/rec/rec.cma"
+  "_build/install/default/lib/rec/rec.cmi"
+  "_build/install/default/lib/rec/rec.cmt"
+  "_build/install/default/lib/rec/rec.cmx"
+  "_build/install/default/lib/rec/rec.cmxa"
+  "_build/install/default/lib/rec/rec.ml"
+  "_build/install/default/lib/rec/rec__Ds.cmi"
+  "_build/install/default/lib/rec/rec__Ds.cmt"
+  "_build/install/default/lib/rec/rec__Ds.cmx"
+  "_build/install/default/lib/rec/rec__Interp.cmi"
+  "_build/install/default/lib/rec/rec__Interp.cmt"
+  "_build/install/default/lib/rec/rec__Interp.cmx"
+]
+libexec: [
+  "_build/install/default/lib/rec/rec.cmxs"
+]
